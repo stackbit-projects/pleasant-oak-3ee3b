@@ -1,0 +1,116 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: boolean
+        name: comments
+        label: Comments
+      - type: image
+        name: feature
+        label: Feature
+      - type: list
+        name: tag
+        label: Tag
+        items:
+          type: string
+      - type: boolean
+        name: project
+        label: Project
+  about:
+    type: page
+    label: About
+    folder: about
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: date
+        name: date
+        label: Date
+      - type: boolean
+        name: comments
+        label: Comments
+  post_1:
+    type: page
+    label: Post 1
+    folder: posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: boolean
+        name: comments
+        label: Comments
+  project:
+    type: page
+    label: Project
+    folder: projects
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: boolean
+        name: comments
+        label: Comments
+  navigation:
+    type: data
+    label: Navigation
+    file: navigation.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: title
+          label: Title
+        - type: string
+          name: url
+          label: Url
